@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="GBK">
+    <title>contact</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <form method="post">
+        <label for="nickname">Name:</label>
+        <input type="text" name="nickname"/><br/>
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone"/><br/>
+        <label for="email">Name:</label>
+        <input type="text" name="email"/><br/>
+        <input type="submit"/>
+    </form>
+    <ul th:each="contact :${contacts}">
+        <li>
+            <span th:text="${contact.id}">ID</span>
+            <span th:text="${contact.nickname}">Nickname</span>
+            <span th:text="${contact.phone}">Phone</span>
+            <span th:text="${contact.email}">Email</span>
+        </li>
+    </ul>
+</body>
+</html>

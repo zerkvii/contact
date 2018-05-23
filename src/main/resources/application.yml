@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: GBK
+spring:
+  thymeleaf:
+    encoding: GBK
+    mode: LEGACYHTML5
+    servlet:
+      content-type: text/html
+    cache: false
+debug: true
